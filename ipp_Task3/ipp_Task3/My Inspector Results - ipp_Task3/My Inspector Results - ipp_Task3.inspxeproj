@@ -18,7 +18,7 @@
  <contextValues type="bag"/>
  <All_Configurations-All_Platforms>
   <analysis_type_settings>
-   <selected_analysis_type_path>C:\Program Files (x86)\IntelSWTools\Inspector 2018\config\analysis_type\mi2.cfg</selected_analysis_type_path>
+   <selected_analysis_type_path>C:\Program Files (x86)\IntelSWTools\Inspector 2018\config\analysis_type\ti3.cfg</selected_analysis_type_path>
   </analysis_type_settings>
   <target_settings>
    <selected_workload>
@@ -34,20 +34,20 @@
        <targetName>launch</targetName>
        <enable_app_output_log type="bool">false</enable_app_output_log>
        <project_id>{56F02C96-54EF-4203-BBE4-A760FB8FEC8C}</project_id>
-       <launch_app.app_to_launch>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Debug\ipp_Task3.exe</launch_app.app_to_launch>
+       <launch_app.app_to_launch>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release\ipp_Task3.exe</launch_app.app_to_launch>
        <launch_app.working_folder>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\ipp_Task3</launch_app.working_folder>
        <launch_app.environment_prepend>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018\windows\redist\ia32\compiler;</launch_app.environment_prepend>
        <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
        <result_directory.path>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\ipp_Task3\My Inspector Results - ipp_Task3\r@@@{at}</result_directory.path>
        <search_directories>
         <item>
-         <value>sym=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Debug</value>
+         <value>sym=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release</value>
         </item>
         <item>
          <value>sym=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3</value>
         </item>
         <item>
-         <value>bin=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Debug</value>
+         <value>bin=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release</value>
         </item>
         <item>
          <value>bin=C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3</value>
@@ -168,7 +168,7 @@
        <context>
         <contextValue>
          <id>appdebug</id>
-         <value>delay-analysis</value>
+         <value>off</value>
         </contextValue>
         <contextValue>
          <id>custom_debugger</id>
@@ -218,7 +218,7 @@
   </target_settings>
  </All_Configurations-All_Platforms>
  <debugger_settings>
-  <debugger_mode>delay-analysis</debugger_mode>
-  <at_cliname>mi2</at_cliname>
+  <debugger_mode>off</debugger_mode>
+  <at_cliname>ti3</at_cliname>
  </debugger_settings>
 </root>

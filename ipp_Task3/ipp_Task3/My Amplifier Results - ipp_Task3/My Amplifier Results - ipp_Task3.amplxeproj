@@ -25,7 +25,7 @@
      <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
       <workload>
        <targetName>launch</targetName>
-       <launch_app.app_to_launch>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Debug\ipp_Task3.exe</launch_app.app_to_launch>
+       <launch_app.app_to_launch>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release\ipp_Task3.exe</launch_app.app_to_launch>
        <launch_app.working_folder>C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\ipp_Task3</launch_app.working_folder>
        <launch_app.app_parameters></launch_app.app_parameters>
        <launch_app.environment></launch_app.environment>

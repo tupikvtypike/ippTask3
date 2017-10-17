@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<diags major="2" minor="0">
+
+<diag id="1">
+	<type>233</type>
+	<message>
+		<timestamp>11809757842</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>10692</threadid>
+			<stackstamp>11809782868</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>C:\Windows\SysWOW64\ntdll.dll</mod>
+			<rva>0x71cd6</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="2">
+	<type>233</type>
+	<message>
+		<timestamp>14164806428</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>7376</threadid>
+			<stackstamp>14164832855</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>C:\Windows\SysWOW64\ntdll.dll</mod>
+			<rva>0x3a470</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="3">
+	<type>233</type>
+	<message>
+		<timestamp>14551934008</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>7144</threadid>
+			<stackstamp>14551947036</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>C:\Windows\SysWOW64\ntdll.dll</mod>
+			<rva>0x3a470</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="4">
+	<type>233</type>
+	<message>
+		<timestamp>14633775212</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>7708</threadid>
+			<stackstamp>14633788688</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>C:\Windows\SysWOW64\ntdll.dll</mod>
+			<rva>0x3a470</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>
+
+<diag id="5">
+	<type>233</type>
+	<message>
+		<timestamp>341979817630</timestamp>
+		<thread>
+			<thrname></thrname>
+			<threadid>1224</threadid>
+			<stackstamp>341979830070</stackstamp>
+			<stacktrace>
+			<loc>
+			<mod>C:\Windows\SysWOW64\KernelBase.dll</mod>
+			<rva>0x13fdf0</rva>
+			</loc>
+			</stacktrace>
+		</thread>
+	</message>
+</diag>

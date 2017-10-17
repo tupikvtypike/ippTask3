@@ -1,0 +1,18 @@
+-r
+C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\ipp_Task3\My Inspector Results - ipp_Task3\r002mi3
+--check-invalid-access
+--no-analyze-stack
+--leak-maximum=100000
+--leak-check-on-exit
+--leak-check-on-demand
+--check-resource-leaks
+--leak-check-report-reachable
+--freelist-vol=1000000
+--guard-zone-size=32
+--appdebug=vsdbg-on-error
+--stack-depth=16
+--mrte-mode=auto
+--heartbeat=1
+--enable-memory-growth
+--
+C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release\ipp_Task3.exe
