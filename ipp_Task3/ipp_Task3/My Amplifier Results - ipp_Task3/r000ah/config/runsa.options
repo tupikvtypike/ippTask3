@@ -1,0 +1,13 @@
+-r
+C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\ipp_Task3\My Amplifier Results - ipp_Task3\r000ah
+--target=host
+--itt-config=frame
+--stack-stitching
+--data-limit-mb=500
+--disk-space-limit=100
+--mrte-type=java,dotnet
+--event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,CPU_CLK_UNHALTED.REF_TSC:sa=3000000,INST_RETIRED.ANY:sa=3000000
+--sample-after-multiplier=1.0
+--mrte-mode=auto
+--
+C:\Users\mathp\Source\Repos\ippTask3\ipp_Task3\Release\ipp_Task3.exe

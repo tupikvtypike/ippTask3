@@ -72,6 +72,49 @@ void SerialGaussMethod(double **matrix, const int rows, double* result)
 	}
 }
 
+/// Функция SerialGaussParallelMethod() решает СЛАУ методом Гаусса 
+/// matrix - исходная квадратная матрица коэффиициентов уравнений, входящих в СЛАУ,
+/// последний столбей матрицы - значения правых частей уравнений
+/// rows - количество строк в исходной квадратной матрице
+/// result - массив ответов СЛАУ
+void SerialGaussParallelMethod(double **matrix, const int rows, double* result)
+{
+	int k;
+	double koef;
+
+	std::chrono::time_point<std::chrono::system_clock> start, end;
+	start = std::chrono::system_clock::now();
+
+	// прямой ход метода Гаусса
+	for (k = 0; k < rows; ++k)
+	{
+		//
+		cilk_for(int i = k + 1; i < rows; ++i)
+		{
+			koef = -matrix[i][k] / matrix[k][k];
+			for (int j = k; j <= rows; ++j)
+				matrix[i][j] += koef * matrix[k][j];
+		}
+	}
+
+	end = std::chrono::system_clock::now();
+	int elapsed_seconds = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+	std::cout << "Время работы прямого хода: " << elapsed_seconds << " микросекунд.\n";
+
+	// обратный ход метода Гаусса
+	result[rows - 1] = matrix[rows - 1][rows] / matrix[rows - 1][rows - 1];
+	for (k = rows - 2; k >= 0; --k)
+	{
+		result[k] = matrix[k][rows];
+		//
+		cilk_for (int j = k + 1; j < rows; ++j)
+		{
+			result[k] -= matrix[k][j] * result[j];
+		}
+		result[k] /= matrix[k][k];
+	}
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
