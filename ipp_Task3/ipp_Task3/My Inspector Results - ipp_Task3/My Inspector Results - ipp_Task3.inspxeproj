@@ -168,7 +168,7 @@
        <context>
         <contextValue>
          <id>appdebug</id>
-         <value>off</value>
+         <value>on-error</value>
         </contextValue>
         <contextValue>
          <id>custom_debugger</id>
@@ -218,7 +218,7 @@
   </target_settings>
  </All_Configurations-All_Platforms>
  <debugger_settings>
-  <debugger_mode>off</debugger_mode>
+  <debugger_mode>on-error</debugger_mode>
   <at_cliname>ti3</at_cliname>
  </debugger_settings>
 </root>

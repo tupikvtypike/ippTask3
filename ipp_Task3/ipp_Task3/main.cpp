@@ -137,6 +137,7 @@ int main()
 
 	// массив решений СЛАУ
 	double *result = new double[test_matrix_lines];
+	double *resultParallel = new double[test_matrix_lines];
 
 	// инициализация тестовой матрицы
 	test_matrix[0][0] = 2; test_matrix[0][1] = 5;  test_matrix[0][2] = 4;  test_matrix[0][3] = 1;  test_matrix[0][4] = 20;
@@ -144,8 +145,8 @@ int main()
 	test_matrix[2][0] = 2; test_matrix[2][1] = 10; test_matrix[2][2] = 9;  test_matrix[2][3] = 7;  test_matrix[2][4] = 40;
 	test_matrix[3][0] = 3; test_matrix[3][1] = 8;  test_matrix[3][2] = 9;  test_matrix[3][3] = 2;  test_matrix[3][4] = 37;
 
-	//consistent = SerialGaussMethod(test_matrix, test_matrix_lines, result);
-	parallel = SerialGaussParallelMethod(test_matrix, test_matrix_lines, result);
+	consistent = SerialGaussMethod(test_matrix, test_matrix_lines, result);
+	parallel = SerialGaussParallelMethod(test_matrix, test_matrix_lines, resultParallel);
 	std::cout << "Ускорение: " << (double)consistent / parallel << ".\n";
 
 	for (i = 0; i < test_matrix_lines; ++i)
@@ -157,10 +158,11 @@ int main()
 
 	for (i = 0; i < test_matrix_lines; ++i)
 	{
-		printf("x(%d) = %lf\n", i, result[i]);
+		printf("x(%d). Сonsistently = %lf, parallel = %lf\n", i, result[i], resultParallel[i]);
 	}
 
-	delete[] result;*/
+	delete[] result;
+	delete[] resultParallel;*/
 
 	double **matrix = new double*[MATRIX_SIZE];
 	for (i = 0; i < (MATRIX_SIZE + 1); ++i)
@@ -169,20 +171,22 @@ int main()
 	}
 	
 	double *result = new double[MATRIX_SIZE];
+	double *resultParallel = new double[MATRIX_SIZE];
 
 	IntiMatrix(matrix);
 	
 	consistent = SerialGaussMethod(matrix, MATRIX_SIZE, result);
-	parallel = SerialGaussParallelMethod(matrix, MATRIX_SIZE, result);
+	parallel = SerialGaussParallelMethod(matrix, MATRIX_SIZE, resultParallel);
 
 	printf("\nSolution:\n");
 	for (i = 0; i < MATRIX_SIZE; ++i)
-		printf("x(%d) = %lf\n", i, result[i]);
+		printf("x(%d). Сonsistently = %lf, parallel = %lf\n", i, result[i], resultParallel[i]);
 
 	for (i = 0; i < MATRIX_SIZE; ++i)
 		delete[]matrix[i];
 
 	delete[] result;
+	delete[] resultParallel;
 
 	if ((consistent > 0) && (parallel > 0))
 	std::cout << "Ускорение: " << (double)consistent / parallel << ".\n";
